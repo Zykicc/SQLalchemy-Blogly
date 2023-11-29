@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Details</title>
+  </head>
+  <body>
+    <div class="col-sm-2 col-6">
+      <img
+        src="{{ user.image_url }}"
+        alt="{{ user.full_name }}"
+        class="img-fluid"
+      />
+    </div>
+    <div>
+      <h1>{{ user.full_name }}</h1>
+
+      <form>
+        <button formaction="/users/{{ user.id }}/edit" formmethod="GET">
+          Edit
+        </button>
+        <button formaction="/users/{{ user.id }}/delete" formmethod="POST">
+          Delete
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit page</title>
+  </head>
+  <body>
+    <h1>Edit a user</h1>
+    <form method="POST">
+      <p>First Name</p>
+      <input name="first_name" placeholder="Enter a first name" type="text" />
+      <p>Last Name</p>
+      <input name="last_name" placeholder="Enter a last name" type="text" />
+      <p>Image URL</p>
+      <input
+        name="image_url"
+        placeholder="Provide an image of this user"
+        type="text"
+      />
+      <div>
+        <a href="/users">Cancel</a>
+        <button type="submit">Save</button>
+      </div>
+    </form>
+  </body>
+</html>
