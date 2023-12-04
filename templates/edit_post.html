@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edit post</title>
+  </head>
+  <body>
+    <h1>Edit post</h1>
+
+    <form method="POST">
+      <div class=>
+        <label for="title">Title</label>
+        <div >
+          <input name="title" value="{{ post.title }}"/>
+        </div>
+      </div>
+
+      <div>
+        <label for="content">Post Content</label>
+        <div>
+          <textarea id="content" name="content">{{ post.content }}</textarea>
+        </div>
+      </div>
+
+      <div>
+          <a href="/{{ post.user_id }}">Cancel</a>
+          <button type="submit">Edit</button>
+      </div>
+    </form>
+  </body>
+</html>

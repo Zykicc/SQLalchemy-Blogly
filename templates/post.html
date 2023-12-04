@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My post</title>
+  </head>
+  <body>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    <p><i>By {{ post.user.full_name }} on {{ post.better_date }}</i></p>
+
+    <form>
+      <button formaction="/{{ post.user_id }}">Cancel</button>
+      <button formaction="/posts/{{ post.id }}/edit">Edit</button>
+      <button formaction="/posts/{{ post.id }}/delete">Delete</button>
+    </form>
+  </body>
+</html>
