@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tags</title>
+  </head>
+  <body>
+    <h1>Tags</h1>
+
+    <ul>
+      {% for tag in tags %}
+      <li><a href="/tags/{{ tag.id }}">{{ tag.name }}</a></li>
+      {% endfor %}
+    </ul>
+
+    <p><a href="/tags/new">Add Tag</a></p>
+  </body>
+</html>
